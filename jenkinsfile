@@ -6,7 +6,7 @@ pipeline{
 
         stage('Continuous Download') {
 
-            steps{
+            steps{ 
                 git branch: 'main', url: 'https://github.com/RENEBONGJIO/MY-PROJECT1.git'
             }
         }
