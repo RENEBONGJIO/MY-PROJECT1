@@ -29,5 +29,17 @@ pipeline{
             }
             
         }
+        stages("Static Test Analysis"){
+
+            steps{
+
+                script{
+
+                    withSonarQubeEnv(credentialsId: 'sonar-token'){
+                        sh 'mvn clean package sonar:sonar'
+                    }
+                }
+            }
+        }
     }
 }
