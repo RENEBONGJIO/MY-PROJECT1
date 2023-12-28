@@ -25,7 +25,7 @@ pipeline{
         stage('Continuous Build'){
 
             steps{
-                sh'mvn clean build'
+                sh'mvn clean install'
             }
         }
     }
